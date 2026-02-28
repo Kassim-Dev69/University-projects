@@ -20,7 +20,7 @@ Projet d'analyse de données et statistiques inférentielles sur un dataset d'an
 
 Analyser la relation entre les notes MyAnimeList (MAL) et un score philosophique attribué aux animes, en utilisant des méthodes de statistiques descriptives et inférentielles.
 
-## Étapes du Pipeline
+## Structure de l'analyse
 
 ### 1️⃣ Visualisation des données brutes
 
@@ -72,7 +72,7 @@ Le script affichera un rapport complet à la console et générera des visualisa
 
 ## Auteur
 
-Projet réalisé pour le cours de Statistiques Inférentielles du S3.
+Projet réalisé par Genesis Kassim pour le cours de Statistiques Inférentielles du S3.
 
 ---
 
