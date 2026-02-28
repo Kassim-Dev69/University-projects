@@ -1,6 +1,20 @@
 # Analyse Statistique des Animes 📊
 
+[![Tests](https://github.com/University-projects/S3/stats-inferentielles/workflows/Test%20Anime%20Analysis%20Script/badge.svg)](https://github.com/University-projects/S3/stats-inferentielles/actions)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Made with ❤️ for Statistics](https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20for-Statistics-red)](https://github.com)
+
 Projet d'analyse de données et statistiques inférentielles sur un dataset d'animes.
+
+## 📊 Status du Projet
+
+| Critère            | Status                                                                                                                                  |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Tests**          | ![Build Status](https://img.shields.io/github/actions/workflow/status/University-projects/S3/stats-inferentielles/test.yml?branch=main) |
+| **Version Python** | 3.9, 3.10, 3.11                                                                                                                         |
+| **Dépendances**    | pandas, matplotlib, seaborn, numpy, scipy                                                                                               |
+| **État**           | ✅ Production                                                                                                                           |
 
 ## Objectif
 

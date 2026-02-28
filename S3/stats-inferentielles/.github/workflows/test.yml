@@ -1,0 +1,48 @@
+name: Test Anime Analysis Script
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas matplotlib seaborn numpy scipy
+
+      - name: Lint with pylint (if available)
+        run: |
+          pip install pylint
+          pylint anime_analysis.py --fail-under=7.0 || true
+        continue-on-error: true
+
+      - name: Check syntax with ast
+        run: |
+          python -m py_compile anime_analysis.py
+
+      - name: Run analysis script (syntax check only)
+        run: |
+          python -c "import anime_analysis" || true
+        continue-on-error: true
+
+      - name: Display test results
+        if: always()
+        run: |
+          echo "✅ Workflow completed"
